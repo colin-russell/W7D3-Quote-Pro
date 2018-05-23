@@ -13,9 +13,4 @@ class Quote: NSObject {
     var quoteAuthor = ""
     var photo = Photo()
     
-    override init() {
-        super.init()
-        
-    }
-    
 }

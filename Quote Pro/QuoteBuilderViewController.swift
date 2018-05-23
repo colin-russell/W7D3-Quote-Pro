@@ -28,15 +28,22 @@ class QuoteBuilderViewController: UIViewController {
             self.view.addSubview(qView)
             self.quoteView = qView
         }
-        //setupQuoteView()
+        
         loadRandomQuote()
         loadRandomImage()
     }
 
     func setupQuoteView() {
-        //quote.generateQuote()
         quoteView.setupWithQuote(quote: quote)
-        quoteView.frame = CGRect(x: 20, y: 20, width: self.view.bounds.width - 20 , height: 400)
+        //quoteView.frame = CGRect(x: 20, y: 20, width: self.view.bounds.width - 20 , height: 400)
+        quoteView.translatesAutoresizingMaskIntoConstraints = false
+
+        let heightConstraint = NSLayoutConstraint(item: quoteView, attribute: .height, relatedBy: .equal, toItem: self.view, attribute: .height, multiplier: 0.5, constant: 0)
+        let leftConstraint = NSLayoutConstraint(item: quoteView, attribute: .left, relatedBy: .equal, toItem: self.view, attribute: .left, multiplier: 1, constant: 0)
+        let rightConstraint = NSLayoutConstraint(item: quoteView, attribute: .right, relatedBy: .equal, toItem: self.view, attribute: .right, multiplier: 1, constant: 0)
+        let topConstraint = NSLayoutConstraint(item: quoteView, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1, constant: 100)
+        self.view.addConstraints([heightConstraint, leftConstraint, rightConstraint, topConstraint])
+
     }
     
     func loadRandomQuote() {
@@ -52,10 +59,7 @@ class QuoteBuilderViewController: UIViewController {
     }
     
     func loadRandomImage() {
-//        let photo = Photo()
-        //let url = URL(string: "https://picsum.photos/200/300/?random")!
-        //Manager.shared.loadImage(with: url, into: )
-        
+
     }
     
     //MARK: Actions
