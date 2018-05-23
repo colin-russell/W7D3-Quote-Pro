@@ -15,15 +15,7 @@ class Quote: NSObject {
     
     override init() {
         super.init()
-        generateQuote()
-    }
-    
-    func generateQuote () {
-        let networkManger = NetworkManager()
-        networkManger.getRandomQuote { (text, author) in
-            self.quoteText = text
-            self.quoteAuthor = author
-        }
+        
     }
     
 }

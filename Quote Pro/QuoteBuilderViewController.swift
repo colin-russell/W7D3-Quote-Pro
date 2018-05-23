@@ -15,44 +15,57 @@ protocol QuoteBuilderDelegate: class {
 
 
 class QuoteBuilderViewController: UIViewController {
-
-    @IBOutlet weak var quoteImageView: UIImageView!
-    @IBOutlet weak var quoteTextLabel: UILabel!
-    @IBOutlet weak var quoteAuthorLabel: UILabel!
     
     let quote = Quote()
+    var quoteView = QuoteView()
     weak var delegate: QuoteBuilderDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        quoteTextLabel.text = quote.quoteText
-        quoteAuthorLabel.text = quote.quoteAuthor
+        if let objects = Bundle.main.loadNibNamed("QuoteView", owner: nil, options: [:]),
+            let qView = objects.first as? QuoteView {
+            self.view.addSubview(qView)
+            self.quoteView = qView
+        }
+        //setupQuoteView()
+        loadRandomQuote()
         loadRandomImage()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setupQuoteView() {
+        //quote.generateQuote()
+        quoteView.setupWithQuote(quote: quote)
+        quoteView.frame = CGRect(x: 20, y: 20, width: self.view.bounds.width - 20 , height: 400)
+    }
+    
+    func loadRandomQuote() {
+        let networkManger = NetworkManager()
+        networkManger.getRandomQuote { (text, author) in
+            DispatchQueue.main.async {
+                self.quote.quoteText = text
+                self.quote.quoteAuthor = author
+                self.setupQuoteView()
+            }
+        }
+        
     }
     
     func loadRandomImage() {
 //        let photo = Photo()
-        let url = URL(string: "https://picsum.photos/200/300/?random")!
-        Manager.shared.loadImage(with: url, into: quoteImageView)
+        //let url = URL(string: "https://picsum.photos/200/300/?random")!
+        //Manager.shared.loadImage(with: url, into: )
         
     }
     
     //MARK: Actions
     
     @IBAction func randomImageButtonPressed(_ sender: UIButton) {
-        loadRandomImage()
+        //loadRandomImage()
     }
     
     @IBAction func randomQuoteButtonPressed(_ sender: UIButton) {
-        quote.generateQuote()
-        quoteTextLabel.text = quote.quoteText
-        quoteAuthorLabel.text = quote.quoteAuthor
+        
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {

@@ -27,8 +27,8 @@
                     <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <size key="shadowOffset" width="1" height="1"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBN-mS-hi5">
-                    <rect key="frame" x="16" y="52" width="343" height="22"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBN-mS-hi5">
+                    <rect key="frame" x="16" y="51.5" width="343" height="21.5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="343" id="vhO-Hz-ArY"/>
                     </constraints>
@@ -55,6 +55,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="imageView" destination="jbi-cI-hF3" id="ds6-nh-mgK"/>
                 <outlet property="quoteAuthorLabel" destination="sQo-0y-Yz8" id="KYw-D3-z99"/>
                 <outlet property="quoteTextLabel" destination="XBN-mS-hi5" id="wTj-TJ-lP4"/>
             </connections>

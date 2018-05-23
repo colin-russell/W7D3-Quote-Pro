@@ -76,45 +76,12 @@
                                     <action selector="randomImageButtonPressed:" destination="NoB-0B-uua" eventType="touchUpInside" id="dmh-xR-tUv"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="44v-Ij-IF3">
-                                <rect key="frame" x="16" y="93" width="343" height="300"/>
-                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="bQ4-VA-hVR"/>
-                                    <constraint firstAttribute="width" constant="343" id="eW4-Ux-hRE"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYy-Lg-mQI">
-                                <rect key="frame" x="163.5" y="269.5" width="48" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXX-cl-5u9">
-                                <rect key="frame" x="30.5" y="173" width="314" height="21.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="314" id="g1T-XK-Mv1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="OXX-cl-5u9" firstAttribute="centerX" secondItem="xlL-fo-Cib" secondAttribute="centerX" id="FX2-ha-vMN"/>
-                            <constraint firstItem="44v-Ij-IF3" firstAttribute="top" secondItem="xlL-fo-Cib" secondAttribute="top" constant="29" id="IId-rJ-nOZ"/>
                             <constraint firstItem="ahC-Lt-aah" firstAttribute="centerX" secondItem="xlL-fo-Cib" secondAttribute="centerX" id="Kwp-79-4X9"/>
-                            <constraint firstItem="44v-Ij-IF3" firstAttribute="centerX" secondItem="xlL-fo-Cib" secondAttribute="centerX" id="NOM-Hc-LYC"/>
-                            <constraint firstItem="OXX-cl-5u9" firstAttribute="top" secondItem="xlL-fo-Cib" secondAttribute="top" constant="109" id="TLV-hN-t3G"/>
                             <constraint firstItem="xlL-fo-Cib" firstAttribute="bottom" secondItem="KQ5-o9-to4" secondAttribute="bottom" constant="118" id="kSt-W6-Upa"/>
-                            <constraint firstItem="vYy-Lg-mQI" firstAttribute="centerX" secondItem="xlL-fo-Cib" secondAttribute="centerX" id="rOR-Qo-ezt"/>
                             <constraint firstItem="KQ5-o9-to4" firstAttribute="centerX" secondItem="xlL-fo-Cib" secondAttribute="centerX" id="rx7-bA-TOk"/>
-                            <constraint firstItem="vYy-Lg-mQI" firstAttribute="top" secondItem="OXX-cl-5u9" secondAttribute="bottom" constant="75.5" id="szW-Aw-C5c"/>
                             <constraint firstItem="KQ5-o9-to4" firstAttribute="top" secondItem="ahC-Lt-aah" secondAttribute="bottom" constant="34" id="znh-a3-arh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xlL-fo-Cib"/>
@@ -131,11 +98,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="quoteAuthorLabel" destination="vYy-Lg-mQI" id="zMv-7K-lS7"/>
-                        <outlet property="quoteImageView" destination="44v-Ij-IF3" id="9WS-wr-71Z"/>
-                        <outlet property="quoteTextLabel" destination="OXX-cl-5u9" id="qNW-he-5Gq"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gE1-9h-IXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
