@@ -75,8 +75,8 @@
 				3B31ABDA20B5AD4C00394C83 /* Assets.xcassets */,
 				3B31ABDC20B5AD4C00394C83 /* LaunchScreen.storyboard */,
 				3B31ABDF20B5AD4C00394C83 /* Info.plist */,
-				3B31ABE520B5B3B300394C83 /* Quote.swift */,
 				3B31ABE720B5B3BF00394C83 /* Photo.swift */,
+				3B31ABE520B5B3B300394C83 /* Quote.swift */,
 				3B31ABE920B5B4F400394C83 /* QuoteBuilderViewController.swift */,
 				3B31ABEB20B5B83700394C83 /* NetworkManager.swift */,
 			);

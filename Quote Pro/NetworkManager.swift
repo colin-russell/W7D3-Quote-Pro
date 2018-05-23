@@ -7,7 +7,11 @@
 //
 
 import UIKit
+import Nuke
 
 class NetworkManager: NSObject {
-
+    
+    func fetchImage() {
+        
+    }
 }

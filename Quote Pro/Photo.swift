@@ -7,7 +7,13 @@
 //
 
 import UIKit
+import Nuke
 
 class Photo: NSObject {
-
+    var image: Image {
+        let _ = URL(string: "https://picsum.photos/200/300/?random")!
+        let img = UIImage()
+        
+        return img
+    }
 }

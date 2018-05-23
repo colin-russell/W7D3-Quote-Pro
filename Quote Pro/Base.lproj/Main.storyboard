@@ -62,28 +62,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahC-Lt-aah">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahC-Lt-aah">
                                 <rect key="frame" x="136" y="455" width="103" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Random Quote"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQ5-o9-to4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQ5-o9-to4">
                                 <rect key="frame" x="136" y="519" width="103" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Random Image"/>
+                                <connections>
+                                    <action selector="randomImageButtonPressed:" destination="NoB-0B-uua" eventType="touchUpInside" id="dmh-xR-tUv"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44v-Ij-IF3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="44v-Ij-IF3">
                                 <rect key="frame" x="16" y="93" width="343" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="bQ4-VA-hVR"/>
+                                    <constraint firstAttribute="width" constant="343" id="eW4-Ux-hRE"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZaI-TS-nnT">
+                                <rect key="frame" x="176" y="557" width="183" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="183" id="38r-qD-RQ3"/>
+                                    <constraint firstAttribute="height" constant="84" id="UCK-UG-QaS"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ahC-Lt-aah" firstAttribute="centerX" secondItem="xlL-fo-Cib" secondAttribute="centerX" id="Kwp-79-4X9"/>
+                            <constraint firstItem="xlL-fo-Cib" firstAttribute="trailing" secondItem="ZaI-TS-nnT" secondAttribute="trailing" constant="16" id="WLD-bA-kpH"/>
+                            <constraint firstItem="44v-Ij-IF3" firstAttribute="top" secondItem="xlL-fo-Cib" secondAttribute="top" constant="29" id="aML-gD-dCV"/>
+                            <constraint firstItem="ZaI-TS-nnT" firstAttribute="leading" secondItem="xlL-fo-Cib" secondAttribute="leading" constant="176" id="gGQ-0K-pbx"/>
+                            <constraint firstItem="xlL-fo-Cib" firstAttribute="trailing" secondItem="44v-Ij-IF3" secondAttribute="trailing" constant="16" id="kKH-I2-aud"/>
+                            <constraint firstItem="xlL-fo-Cib" firstAttribute="bottom" secondItem="KQ5-o9-to4" secondAttribute="bottom" constant="118" id="kSt-W6-Upa"/>
+                            <constraint firstItem="44v-Ij-IF3" firstAttribute="leading" secondItem="xlL-fo-Cib" secondAttribute="leading" constant="16" id="pdW-hz-To8"/>
+                            <constraint firstItem="KQ5-o9-to4" firstAttribute="centerX" secondItem="xlL-fo-Cib" secondAttribute="centerX" id="rx7-bA-TOk"/>
+                            <constraint firstItem="ahC-Lt-aah" firstAttribute="top" secondItem="44v-Ij-IF3" secondAttribute="bottom" constant="62" id="w2s-5X-Ljx"/>
+                            <constraint firstItem="xlL-fo-Cib" firstAttribute="bottom" secondItem="ZaI-TS-nnT" secondAttribute="bottom" constant="26" id="xpz-qz-WhV"/>
+                            <constraint firstItem="KQ5-o9-to4" firstAttribute="top" secondItem="ahC-Lt-aah" secondAttribute="bottom" constant="34" id="znh-a3-arh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xlL-fo-Cib"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hly-1R-bT1">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6oY-m7-yq3"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6oY-m7-yq3">
+                            <connections>
+                                <action selector="cancelQuoteSave:" destination="NoB-0B-uua" id="Fqz-aJ-2HD"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="aER-tF-d5t"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="quoteImageView" destination="44v-Ij-IF3" id="9WS-wr-71Z"/>
+                        <outlet property="testImageView" destination="ZaI-TS-nnT" id="fbB-Bd-0ga"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gE1-9h-IXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
