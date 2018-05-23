@@ -8,11 +8,11 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, QuoteBuilderDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +20,17 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func didfinishSaving(quote: Quote) {
+        print(quote.quoteText)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
+        guard let vc: QuoteBuilderViewController = segue.destination as? QuoteBuilderViewController else {
+            print("error segue.destination")
+            return
+        }
+        vc.delegate = self        
+    }
 }
 

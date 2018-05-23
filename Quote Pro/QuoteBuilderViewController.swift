@@ -9,15 +9,25 @@
 import UIKit
 import Nuke
 
+protocol QuoteBuilderDelegate: class {
+    func didfinishSaving(quote: Quote)
+}
+
+
 class QuoteBuilderViewController: UIViewController {
 
     @IBOutlet weak var quoteImageView: UIImageView!
     @IBOutlet weak var quoteTextLabel: UILabel!
     @IBOutlet weak var quoteAuthorLabel: UILabel!
     
+    let quote = Quote()
+    weak var delegate: QuoteBuilderDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        quoteTextLabel.text = quote.quoteText
+        quoteAuthorLabel.text = quote.quoteAuthor
         loadRandomImage()
     }
 
@@ -40,16 +50,16 @@ class QuoteBuilderViewController: UIViewController {
     }
     
     @IBAction func randomQuoteButtonPressed(_ sender: UIButton) {
-        let q = Quote()
-        q.getRandomQuote { () in
-            DispatchQueue.main.async {
-                self.quoteTextLabel.text = q.quoteText
-                self.quoteAuthorLabel.text = q.quoteAuthor
-            }
-        }
-        
+        quote.generateQuote()
+        quoteTextLabel.text = quote.quoteText
+        quoteAuthorLabel.text = quote.quoteAuthor
     }
     
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        
+        delegate?.didfinishSaving(quote: quote)
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func cancelQuoteSave(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)

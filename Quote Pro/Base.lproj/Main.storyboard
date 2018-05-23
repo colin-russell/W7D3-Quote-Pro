@@ -45,7 +45,7 @@
                     <navigationItem key="navigationItem" title="Home" id="4Kr-vu-74o">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hC0-eG-VAG">
                             <connections>
-                                <segue destination="gBI-T6-joN" kind="presentation" id="7VT-rz-t65"/>
+                                <segue destination="NoB-0B-uua" kind="show" id="ecY-37-zBn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -85,31 +85,36 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYy-Lg-mQI">
-                                <rect key="frame" x="165" y="269" width="45" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="163.5" y="269.5" width="48" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXX-cl-5u9">
-                                <rect key="frame" x="164" y="173" width="47" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXX-cl-5u9">
+                                <rect key="frame" x="30.5" y="173" width="314" height="21.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="314" id="g1T-XK-Mv1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OXX-cl-5u9" firstAttribute="centerX" secondItem="xlL-fo-Cib" secondAttribute="centerX" id="FX2-ha-vMN"/>
+                            <constraint firstItem="44v-Ij-IF3" firstAttribute="top" secondItem="xlL-fo-Cib" secondAttribute="top" constant="29" id="IId-rJ-nOZ"/>
                             <constraint firstItem="ahC-Lt-aah" firstAttribute="centerX" secondItem="xlL-fo-Cib" secondAttribute="centerX" id="Kwp-79-4X9"/>
+                            <constraint firstItem="44v-Ij-IF3" firstAttribute="centerX" secondItem="xlL-fo-Cib" secondAttribute="centerX" id="NOM-Hc-LYC"/>
                             <constraint firstItem="OXX-cl-5u9" firstAttribute="top" secondItem="xlL-fo-Cib" secondAttribute="top" constant="109" id="TLV-hN-t3G"/>
-                            <constraint firstItem="44v-Ij-IF3" firstAttribute="top" secondItem="xlL-fo-Cib" secondAttribute="top" constant="29" id="aML-gD-dCV"/>
-                            <constraint firstItem="xlL-fo-Cib" firstAttribute="trailing" secondItem="44v-Ij-IF3" secondAttribute="trailing" constant="16" id="kKH-I2-aud"/>
                             <constraint firstItem="xlL-fo-Cib" firstAttribute="bottom" secondItem="KQ5-o9-to4" secondAttribute="bottom" constant="118" id="kSt-W6-Upa"/>
-                            <constraint firstItem="44v-Ij-IF3" firstAttribute="leading" secondItem="xlL-fo-Cib" secondAttribute="leading" constant="16" id="pdW-hz-To8"/>
                             <constraint firstItem="vYy-Lg-mQI" firstAttribute="centerX" secondItem="xlL-fo-Cib" secondAttribute="centerX" id="rOR-Qo-ezt"/>
                             <constraint firstItem="KQ5-o9-to4" firstAttribute="centerX" secondItem="xlL-fo-Cib" secondAttribute="centerX" id="rx7-bA-TOk"/>
                             <constraint firstItem="vYy-Lg-mQI" firstAttribute="top" secondItem="OXX-cl-5u9" secondAttribute="bottom" constant="75.5" id="szW-Aw-C5c"/>
-                            <constraint firstItem="ahC-Lt-aah" firstAttribute="top" secondItem="44v-Ij-IF3" secondAttribute="bottom" constant="62" id="w2s-5X-Ljx"/>
                             <constraint firstItem="KQ5-o9-to4" firstAttribute="top" secondItem="ahC-Lt-aah" secondAttribute="bottom" constant="34" id="znh-a3-arh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xlL-fo-Cib"/>
@@ -120,7 +125,11 @@
                                 <action selector="cancelQuoteSave:" destination="NoB-0B-uua" id="Fqz-aJ-2HD"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="aER-tF-d5t"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="aER-tF-d5t">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="NoB-0B-uua" id="STO-dK-LKQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="quoteAuthorLabel" destination="vYy-Lg-mQI" id="zMv-7K-lS7"/>
@@ -130,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gE1-9h-IXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2842" y="156"/>
+            <point key="canvasLocation" x="2188" y="91"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bdj-mE-TlC">
@@ -149,24 +158,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsy-qV-cvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="85.599999999999994" y="91.304347826086968"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="bmZ-Xg-jav">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="csi-Rq-tRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gBI-T6-joN" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="17i-qw-dNW">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="NoB-0B-uua" kind="relationship" relationship="rootViewController" id="5aa-23-Yth"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="1753" y="392"/>
         </scene>
     </scenes>
 </document>
