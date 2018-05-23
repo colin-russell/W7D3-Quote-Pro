@@ -12,7 +12,8 @@ import Nuke
 class QuoteBuilderViewController: UIViewController {
 
     @IBOutlet weak var quoteImageView: UIImageView!
-    @IBOutlet weak var testImageView: UIImageView!
+    @IBOutlet weak var quoteTextLabel: UILabel!
+    @IBOutlet weak var quoteAuthorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +27,9 @@ class QuoteBuilderViewController: UIViewController {
     }
     
     func loadRandomImage() {
-        let photo = Photo()
-        quoteImageView.image = photo.image
-        
+//        let photo = Photo()
+        let url = URL(string: "https://picsum.photos/200/300/?random")!
+        Manager.shared.loadImage(with: url, into: quoteImageView)
         
     }
     
@@ -37,6 +38,18 @@ class QuoteBuilderViewController: UIViewController {
     @IBAction func randomImageButtonPressed(_ sender: UIButton) {
         loadRandomImage()
     }
+    
+    @IBAction func randomQuoteButtonPressed(_ sender: UIButton) {
+        let q = Quote()
+        q.getRandomQuote { () in
+            DispatchQueue.main.async {
+                self.quoteTextLabel.text = q.quoteText
+                self.quoteAuthorLabel.text = q.quoteAuthor
+            }
+        }
+        
+    }
+    
     
     @IBAction func cancelQuoteSave(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)

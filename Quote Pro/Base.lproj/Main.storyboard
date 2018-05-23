@@ -65,6 +65,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahC-Lt-aah">
                                 <rect key="frame" x="136" y="455" width="103" height="30"/>
                                 <state key="normal" title="Random Quote"/>
+                                <connections>
+                                    <action selector="randomQuoteButtonPressed:" destination="NoB-0B-uua" eventType="touchUpInside" id="fad-ua-m95"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQ5-o9-to4">
                                 <rect key="frame" x="136" y="519" width="103" height="30"/>
@@ -81,26 +84,32 @@
                                     <constraint firstAttribute="width" constant="343" id="eW4-Ux-hRE"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZaI-TS-nnT">
-                                <rect key="frame" x="176" y="557" width="183" height="84"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="183" id="38r-qD-RQ3"/>
-                                    <constraint firstAttribute="height" constant="84" id="UCK-UG-QaS"/>
-                                </constraints>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYy-Lg-mQI">
+                                <rect key="frame" x="165" y="269" width="45" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXX-cl-5u9">
+                                <rect key="frame" x="164" y="173" width="47" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="OXX-cl-5u9" firstAttribute="centerX" secondItem="xlL-fo-Cib" secondAttribute="centerX" id="FX2-ha-vMN"/>
                             <constraint firstItem="ahC-Lt-aah" firstAttribute="centerX" secondItem="xlL-fo-Cib" secondAttribute="centerX" id="Kwp-79-4X9"/>
-                            <constraint firstItem="xlL-fo-Cib" firstAttribute="trailing" secondItem="ZaI-TS-nnT" secondAttribute="trailing" constant="16" id="WLD-bA-kpH"/>
+                            <constraint firstItem="OXX-cl-5u9" firstAttribute="top" secondItem="xlL-fo-Cib" secondAttribute="top" constant="109" id="TLV-hN-t3G"/>
                             <constraint firstItem="44v-Ij-IF3" firstAttribute="top" secondItem="xlL-fo-Cib" secondAttribute="top" constant="29" id="aML-gD-dCV"/>
-                            <constraint firstItem="ZaI-TS-nnT" firstAttribute="leading" secondItem="xlL-fo-Cib" secondAttribute="leading" constant="176" id="gGQ-0K-pbx"/>
                             <constraint firstItem="xlL-fo-Cib" firstAttribute="trailing" secondItem="44v-Ij-IF3" secondAttribute="trailing" constant="16" id="kKH-I2-aud"/>
                             <constraint firstItem="xlL-fo-Cib" firstAttribute="bottom" secondItem="KQ5-o9-to4" secondAttribute="bottom" constant="118" id="kSt-W6-Upa"/>
                             <constraint firstItem="44v-Ij-IF3" firstAttribute="leading" secondItem="xlL-fo-Cib" secondAttribute="leading" constant="16" id="pdW-hz-To8"/>
+                            <constraint firstItem="vYy-Lg-mQI" firstAttribute="centerX" secondItem="xlL-fo-Cib" secondAttribute="centerX" id="rOR-Qo-ezt"/>
                             <constraint firstItem="KQ5-o9-to4" firstAttribute="centerX" secondItem="xlL-fo-Cib" secondAttribute="centerX" id="rx7-bA-TOk"/>
+                            <constraint firstItem="vYy-Lg-mQI" firstAttribute="top" secondItem="OXX-cl-5u9" secondAttribute="bottom" constant="75.5" id="szW-Aw-C5c"/>
                             <constraint firstItem="ahC-Lt-aah" firstAttribute="top" secondItem="44v-Ij-IF3" secondAttribute="bottom" constant="62" id="w2s-5X-Ljx"/>
-                            <constraint firstItem="xlL-fo-Cib" firstAttribute="bottom" secondItem="ZaI-TS-nnT" secondAttribute="bottom" constant="26" id="xpz-qz-WhV"/>
                             <constraint firstItem="KQ5-o9-to4" firstAttribute="top" secondItem="ahC-Lt-aah" secondAttribute="bottom" constant="34" id="znh-a3-arh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xlL-fo-Cib"/>
@@ -114,13 +123,14 @@
                         <barButtonItem key="rightBarButtonItem" title="Save" id="aER-tF-d5t"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="quoteAuthorLabel" destination="vYy-Lg-mQI" id="zMv-7K-lS7"/>
                         <outlet property="quoteImageView" destination="44v-Ij-IF3" id="9WS-wr-71Z"/>
-                        <outlet property="testImageView" destination="ZaI-TS-nnT" id="fbB-Bd-0ga"/>
+                        <outlet property="quoteTextLabel" destination="OXX-cl-5u9" id="qNW-he-5Gq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gE1-9h-IXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2700" y="92.203898050974516"/>
+            <point key="canvasLocation" x="2842" y="156"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bdj-mE-TlC">
