@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		3B31ABD420B5AD4800394C83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31ABD320B5AD4800394C83 /* AppDelegate.swift */; };
-		3B31ABD620B5AD4800394C83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31ABD520B5AD4800394C83 /* ViewController.swift */; };
+		3B31ABD620B5AD4800394C83 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31ABD520B5AD4800394C83 /* HomeViewController.swift */; };
 		3B31ABD920B5AD4800394C83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B31ABD720B5AD4800394C83 /* Main.storyboard */; };
 		3B31ABDB20B5AD4C00394C83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B31ABDA20B5AD4C00394C83 /* Assets.xcassets */; };
 		3B31ABDE20B5AD4C00394C83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B31ABDC20B5AD4C00394C83 /* LaunchScreen.storyboard */; };
+		3B31ABE620B5B3B300394C83 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31ABE520B5B3B300394C83 /* Quote.swift */; };
+		3B31ABE820B5B3BF00394C83 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31ABE720B5B3BF00394C83 /* Photo.swift */; };
+		3B31ABEA20B5B4F400394C83 /* QuoteBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31ABE920B5B4F400394C83 /* QuoteBuilderViewController.swift */; };
+		3B31ABEC20B5B83700394C83 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31ABEB20B5B83700394C83 /* NetworkManager.swift */; };
+		9AA81624F4AE69BCBE0F9B24 /* Pods_Quote_Pro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 974CB800AA985AA7CAA5E36E /* Pods_Quote_Pro.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B31ABD020B5AD4800394C83 /* Quote Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quote Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B31ABD320B5AD4800394C83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3B31ABD520B5AD4800394C83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B31ABD520B5AD4800394C83 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3B31ABD820B5AD4800394C83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B31ABDA20B5AD4C00394C83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B31ABDD20B5AD4C00394C83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B31ABDF20B5AD4C00394C83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B31ABE520B5B3B300394C83 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		3B31ABE720B5B3BF00394C83 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		3B31ABE920B5B4F400394C83 /* QuoteBuilderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteBuilderViewController.swift; sourceTree = "<group>"; };
+		3B31ABEB20B5B83700394C83 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		974CB800AA985AA7CAA5E36E /* Pods_Quote_Pro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quote_Pro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A61E8FB1FBCBD1D7AE249DDC /* Pods-Quote Pro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quote Pro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quote Pro/Pods-Quote Pro.debug.xcconfig"; sourceTree = "<group>"; };
+		F20F88FC539603E2B3729B3E /* Pods-Quote Pro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quote Pro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quote Pro/Pods-Quote Pro.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA81624F4AE69BCBE0F9B24 /* Pods_Quote_Pro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,8 @@
 			children = (
 				3B31ABD220B5AD4800394C83 /* Quote Pro */,
 				3B31ABD120B5AD4800394C83 /* Products */,
+				B1CA13DC0D64CF677F4E8727 /* Pods */,
+				91BBF7A6A61377EFDE75EA04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +70,34 @@
 			isa = PBXGroup;
 			children = (
 				3B31ABD320B5AD4800394C83 /* AppDelegate.swift */,
-				3B31ABD520B5AD4800394C83 /* ViewController.swift */,
+				3B31ABD520B5AD4800394C83 /* HomeViewController.swift */,
 				3B31ABD720B5AD4800394C83 /* Main.storyboard */,
 				3B31ABDA20B5AD4C00394C83 /* Assets.xcassets */,
 				3B31ABDC20B5AD4C00394C83 /* LaunchScreen.storyboard */,
 				3B31ABDF20B5AD4C00394C83 /* Info.plist */,
+				3B31ABE520B5B3B300394C83 /* Quote.swift */,
+				3B31ABE720B5B3BF00394C83 /* Photo.swift */,
+				3B31ABE920B5B4F400394C83 /* QuoteBuilderViewController.swift */,
+				3B31ABEB20B5B83700394C83 /* NetworkManager.swift */,
 			);
 			path = "Quote Pro";
+			sourceTree = "<group>";
+		};
+		91BBF7A6A61377EFDE75EA04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				974CB800AA985AA7CAA5E36E /* Pods_Quote_Pro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1CA13DC0D64CF677F4E8727 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A61E8FB1FBCBD1D7AE249DDC /* Pods-Quote Pro.debug.xcconfig */,
+				F20F88FC539603E2B3729B3E /* Pods-Quote Pro.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B31ABE220B5AD4C00394C83 /* Build configuration list for PBXNativeTarget "Quote Pro" */;
 			buildPhases = (
+				55942A9E20ADBB944C80B1F1 /* [CP] Check Pods Manifest.lock */,
 				3B31ABCC20B5AD4800394C83 /* Sources */,
 				3B31ABCD20B5AD4800394C83 /* Frameworks */,
 				3B31ABCE20B5AD4800394C83 /* Resources */,
+				B78F93D9D3501BD4372FD201 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,12 +168,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		55942A9E20ADBB944C80B1F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Quote Pro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B78F93D9D3501BD4372FD201 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Quote Pro/Pods-Quote Pro-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Quote Pro/Pods-Quote Pro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3B31ABCC20B5AD4800394C83 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B31ABD620B5AD4800394C83 /* ViewController.swift in Sources */,
+				3B31ABEC20B5B83700394C83 /* NetworkManager.swift in Sources */,
+				3B31ABEA20B5B4F400394C83 /* QuoteBuilderViewController.swift in Sources */,
+				3B31ABE820B5B3BF00394C83 /* Photo.swift in Sources */,
+				3B31ABD620B5AD4800394C83 /* HomeViewController.swift in Sources */,
+				3B31ABE620B5B3B300394C83 /* Quote.swift in Sources */,
 				3B31ABD420B5AD4800394C83 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +359,7 @@
 		};
 		3B31ABE320B5AD4C00394C83 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A61E8FB1FBCBD1D7AE249DDC /* Pods-Quote Pro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +378,7 @@
 		};
 		3B31ABE420B5AD4C00394C83 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F20F88FC539603E2B3729B3E /* Pods-Quote Pro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
