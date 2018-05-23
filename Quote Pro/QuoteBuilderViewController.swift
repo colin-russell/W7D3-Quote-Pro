@@ -30,12 +30,11 @@ class QuoteBuilderViewController: UIViewController {
         }
         
         loadRandomQuote()
-        loadRandomImage()
+        
     }
 
     func setupQuoteView() {
         quoteView.setupWithQuote(quote: quote)
-        //quoteView.frame = CGRect(x: 20, y: 20, width: self.view.bounds.width - 20 , height: 400)
         quoteView.translatesAutoresizingMaskIntoConstraints = false
 
         let heightConstraint = NSLayoutConstraint(item: quoteView, attribute: .height, relatedBy: .equal, toItem: self.view, attribute: .height, multiplier: 0.5, constant: 0)
@@ -58,8 +57,12 @@ class QuoteBuilderViewController: UIViewController {
         
     }
     
-    func loadRandomImage() {
-
+    func saveViewImage() {
+        let renderer = UIGraphicsImageRenderer(size: view.bounds.size)
+        let image = renderer.image { ctx in
+            quoteView.drawHierarchy(in: quoteView.bounds, afterScreenUpdates: true)
+        }
+        quote.quoteImage = image
     }
     
     //MARK: Actions
@@ -69,17 +72,20 @@ class QuoteBuilderViewController: UIViewController {
     }
     
     @IBAction func randomQuoteButtonPressed(_ sender: UIButton) {
-        
+        loadRandomQuote()
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
-        
+        saveViewImage()
         delegate?.didfinishSaving(quote: quote)
-        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+        //dismiss(animated: true, completion: nil)
+        
     }
     
     @IBAction func cancelQuoteSave(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+//        dismiss(animated: true, completion: nil)
     }
     
 }

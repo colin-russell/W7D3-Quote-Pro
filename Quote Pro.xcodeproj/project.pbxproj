@@ -8,33 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		3B31ABD420B5AD4800394C83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31ABD320B5AD4800394C83 /* AppDelegate.swift */; };
-		3B31ABD620B5AD4800394C83 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31ABD520B5AD4800394C83 /* HomeViewController.swift */; };
+		3B31ABD620B5AD4800394C83 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31ABD520B5AD4800394C83 /* HomeTableViewController.swift */; };
 		3B31ABD920B5AD4800394C83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B31ABD720B5AD4800394C83 /* Main.storyboard */; };
 		3B31ABDB20B5AD4C00394C83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B31ABDA20B5AD4C00394C83 /* Assets.xcassets */; };
 		3B31ABDE20B5AD4C00394C83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B31ABDC20B5AD4C00394C83 /* LaunchScreen.storyboard */; };
 		3B31ABE620B5B3B300394C83 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31ABE520B5B3B300394C83 /* Quote.swift */; };
-		3B31ABE820B5B3BF00394C83 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31ABE720B5B3BF00394C83 /* Photo.swift */; };
 		3B31ABEA20B5B4F400394C83 /* QuoteBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31ABE920B5B4F400394C83 /* QuoteBuilderViewController.swift */; };
 		3B31ABEC20B5B83700394C83 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31ABEB20B5B83700394C83 /* NetworkManager.swift */; };
 		3B31ABEE20B5F38B00394C83 /* QuoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B31ABED20B5F38B00394C83 /* QuoteView.xib */; };
 		3B31ABF020B5F3AE00394C83 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31ABEF20B5F3AE00394C83 /* QuoteView.swift */; };
+		3B31ABF220B6237700394C83 /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B31ABF120B6237700394C83 /* QuoteTableViewCell.swift */; };
 		9AA81624F4AE69BCBE0F9B24 /* Pods_Quote_Pro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 974CB800AA985AA7CAA5E36E /* Pods_Quote_Pro.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B31ABD020B5AD4800394C83 /* Quote Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quote Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B31ABD320B5AD4800394C83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3B31ABD520B5AD4800394C83 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3B31ABD520B5AD4800394C83 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		3B31ABD820B5AD4800394C83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B31ABDA20B5AD4C00394C83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B31ABDD20B5AD4C00394C83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B31ABDF20B5AD4C00394C83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B31ABE520B5B3B300394C83 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
-		3B31ABE720B5B3BF00394C83 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		3B31ABE920B5B4F400394C83 /* QuoteBuilderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteBuilderViewController.swift; sourceTree = "<group>"; };
 		3B31ABEB20B5B83700394C83 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3B31ABED20B5F38B00394C83 /* QuoteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteView.xib; sourceTree = "<group>"; };
 		3B31ABEF20B5F3AE00394C83 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
+		3B31ABF120B6237700394C83 /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
 		974CB800AA985AA7CAA5E36E /* Pods_Quote_Pro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quote_Pro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A61E8FB1FBCBD1D7AE249DDC /* Pods-Quote Pro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quote Pro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quote Pro/Pods-Quote Pro.debug.xcconfig"; sourceTree = "<group>"; };
 		F20F88FC539603E2B3729B3E /* Pods-Quote Pro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quote Pro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quote Pro/Pods-Quote Pro.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,17 +74,17 @@
 			isa = PBXGroup;
 			children = (
 				3B31ABD320B5AD4800394C83 /* AppDelegate.swift */,
-				3B31ABD520B5AD4800394C83 /* HomeViewController.swift */,
+				3B31ABD520B5AD4800394C83 /* HomeTableViewController.swift */,
 				3B31ABD720B5AD4800394C83 /* Main.storyboard */,
 				3B31ABDA20B5AD4C00394C83 /* Assets.xcassets */,
 				3B31ABDF20B5AD4C00394C83 /* Info.plist */,
-				3B31ABE720B5B3BF00394C83 /* Photo.swift */,
 				3B31ABE520B5B3B300394C83 /* Quote.swift */,
 				3B31ABE920B5B4F400394C83 /* QuoteBuilderViewController.swift */,
 				3B31ABEB20B5B83700394C83 /* NetworkManager.swift */,
 				3B31ABDC20B5AD4C00394C83 /* LaunchScreen.storyboard */,
 				3B31ABED20B5F38B00394C83 /* QuoteView.xib */,
 				3B31ABEF20B5F3AE00394C83 /* QuoteView.swift */,
+				3B31ABF120B6237700394C83 /* QuoteTableViewCell.swift */,
 			);
 			path = "Quote Pro";
 			sourceTree = "<group>";
@@ -221,9 +221,9 @@
 			files = (
 				3B31ABEC20B5B83700394C83 /* NetworkManager.swift in Sources */,
 				3B31ABEA20B5B4F400394C83 /* QuoteBuilderViewController.swift in Sources */,
-				3B31ABE820B5B3BF00394C83 /* Photo.swift in Sources */,
-				3B31ABD620B5AD4800394C83 /* HomeViewController.swift in Sources */,
+				3B31ABD620B5AD4800394C83 /* HomeTableViewController.swift in Sources */,
 				3B31ABF020B5F3AE00394C83 /* QuoteView.swift in Sources */,
+				3B31ABF220B6237700394C83 /* QuoteTableViewCell.swift in Sources */,
 				3B31ABE620B5B3B300394C83 /* Quote.swift in Sources */,
 				3B31ABD420B5AD4800394C83 /* AppDelegate.swift in Sources */,
 			);

@@ -11,6 +11,7 @@ import UIKit
 class Quote: NSObject {
     var quoteText = ""
     var quoteAuthor = ""
-    var photo = Photo()
+    var backgroundPhoto = UIImage()
+    var quoteImage = UIImage()
     
 }
