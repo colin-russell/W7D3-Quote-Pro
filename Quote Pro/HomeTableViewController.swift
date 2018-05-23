@@ -29,7 +29,7 @@ class HomeTableViewController: UITableViewController, QuoteBuilderDelegate {
     }
     
     //MARK: UITableView Delegate
-   
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return quotes.count
     }
@@ -54,6 +54,13 @@ class HomeTableViewController: UITableViewController, QuoteBuilderDelegate {
         cell.quoteImage.image = quote.quoteImage
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let image = quotes[indexPath.row]
+        let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])
+        present(vc, animated: true)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
